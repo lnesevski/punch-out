@@ -1,0 +1,11 @@
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\bin\Debug\Punch-Out.exe.config
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\bin\Debug\Punch-Out.exe
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\bin\Debug\Punch-Out.pdb
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\obj\Debug\Punch-Out.csprojAssemblyReference.cache
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\obj\Debug\Punch_Out.Form1.resources
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\obj\Debug\Punch_Out.Properties.Resources.resources
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\obj\Debug\Punch-Out.csproj.GenerateResource.cache
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\obj\Debug\Punch-Out.csproj.CoreCompileInputs.cache
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\obj\Debug\Punch-Out.exe
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\obj\Debug\Punch-Out.pdb
+D:\Codes IV\VP\Punch-Out\Punch-Out\Punch-Out\obj\Debug\Punch_Out.HomeForm.resources
