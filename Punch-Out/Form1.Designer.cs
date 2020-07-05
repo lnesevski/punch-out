@@ -38,6 +38,8 @@
             this.roundNum = new System.Windows.Forms.Label();
             this.enemyMovementTimer = new System.Windows.Forms.Timer(this.components);
             this.enemyStateTimer = new System.Windows.Forms.Timer(this.components);
+            this.playerWinsLabel = new System.Windows.Forms.Label();
+            this.enemyWinsLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.playerIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyIcon)).BeginInit();
             this.SuspendLayout();
@@ -111,6 +113,30 @@
             this.enemyStateTimer.Interval = 400;
             this.enemyStateTimer.Tick += new System.EventHandler(this.enemyStateTimer_Tick);
             // 
+            // playerWinsLabel
+            // 
+            this.playerWinsLabel.AutoSize = true;
+            this.playerWinsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.playerWinsLabel.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerWinsLabel.ForeColor = System.Drawing.Color.White;
+            this.playerWinsLabel.Location = new System.Drawing.Point(370, 12);
+            this.playerWinsLabel.Name = "playerWinsLabel";
+            this.playerWinsLabel.Size = new System.Drawing.Size(21, 24);
+            this.playerWinsLabel.TabIndex = 6;
+            this.playerWinsLabel.Text = "0";
+            // 
+            // enemyWinsLabel
+            // 
+            this.enemyWinsLabel.AutoSize = true;
+            this.enemyWinsLabel.BackColor = System.Drawing.Color.Transparent;
+            this.enemyWinsLabel.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enemyWinsLabel.ForeColor = System.Drawing.Color.White;
+            this.enemyWinsLabel.Location = new System.Drawing.Point(741, 12);
+            this.enemyWinsLabel.Name = "enemyWinsLabel";
+            this.enemyWinsLabel.Size = new System.Drawing.Size(21, 24);
+            this.enemyWinsLabel.TabIndex = 7;
+            this.enemyWinsLabel.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -118,6 +144,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1132, 469);
+            this.Controls.Add(this.enemyWinsLabel);
+            this.Controls.Add(this.playerWinsLabel);
             this.Controls.Add(this.roundNum);
             this.Controls.Add(this.enemyIcon);
             this.Controls.Add(this.playerIcon);
@@ -150,6 +178,8 @@
         private System.Windows.Forms.Label roundNum;
         private System.Windows.Forms.Timer enemyMovementTimer;
         private System.Windows.Forms.Timer enemyStateTimer;
+        private System.Windows.Forms.Label playerWinsLabel;
+        private System.Windows.Forms.Label enemyWinsLabel;
     }
 }
 

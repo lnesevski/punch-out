@@ -22,6 +22,8 @@ namespace Punch_Out
         private Random enemyMovementGenerator;
         private Random enemyStateGenerator;
         private int CurrentRound;
+        private int PlayerWins;
+        private int EnemyWins;
        
         public Form1(HomeForm ParentForm)
         {
@@ -44,6 +46,9 @@ namespace Punch_Out
             this.Home = ParentForm;
 
             this.CurrentRound = 1;
+
+            this.PlayerWins = 0;
+            this.EnemyWins = 0;
             
         }
 
@@ -112,6 +117,14 @@ namespace Punch_Out
                 this.enemyStateTimer.Stop();
                 this.Scene.End();
                 String text = Scene.win() ? "You win!" : "You lose.";
+                if (Scene.win())
+                {
+                    this.PlayerWins++;
+                }
+                else
+                {
+                    this.EnemyWins++;
+                }
                 if (DialogResult.Yes == MessageBox.Show("Play again?", text, MessageBoxButtons.YesNo))
                 {
 
@@ -121,6 +134,8 @@ namespace Punch_Out
                     this.roundNum.Text = String.Format("Round {0}", ++this.CurrentRound);
                     this.enemyMovementTimer.Start();
                     this.enemyStateTimer.Start();
+                    this.playerWinsLabel.Text = String.Format("{0}", this.PlayerWins);
+                    this.enemyWinsLabel.Text = String.Format("{0}", this.EnemyWins);
 
                 }
                 else
