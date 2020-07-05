@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,7 +15,7 @@ namespace Punch_Out
         public Enemy (Point p, Bitmap Image): base(p, Image)
         {
             this.Poisition.Offset(0, -80);
-            this.moveSpeed = 30;
+            this.moveSpeed = 45;
         }
         public override void Block()
         {
@@ -30,21 +31,26 @@ namespace Punch_Out
 
         public override void Punch(bool isLeft)
         {
-            if (isLeft)
+            if (InRange())
             {
-                this.currentSTATE = STATE.LEFT;
-                this.Image = Resources.left;
+                if (isLeft)
+                {
+                    this.currentSTATE = STATE.LEFT;
+                    this.Image = Resources.left;
+                }
+                else
+                {
+                    this.currentSTATE = STATE.RIGHT;
+                    this.Image = Resources.right;
+
+                }
+                if (this.enemy.checkSTATE() != STATE.BLOCK)
+                {
+                    this.enemy.TakeDamage(13);
+                }
             }
             else
-            {
-                this.currentSTATE = STATE.RIGHT;
-                this.Image = Resources.right;
-                
-            }
-            if(InRange() && this.enemy.checkSTATE() != STATE.BLOCK)
-            {
-                this.enemy.TakeDamage(13);                 
-            }
+                this.Idle();
         }
 
         public override void MoveDown()

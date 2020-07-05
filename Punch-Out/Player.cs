@@ -85,7 +85,7 @@ namespace Punch_Out
             }
             if (this.InRange() && enemy.checkSTATE() != Boxer.STATE.BLOCK)
             {
-                enemy.TakeDamage(5);
+                enemy.TakeDamage(4);
             }
             canPunch = false;  
            

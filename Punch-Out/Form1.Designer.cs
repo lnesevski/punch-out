@@ -47,7 +47,7 @@
             // backgroundAnimationTimer
             // 
             this.backgroundAnimationTimer.Enabled = true;
-            this.backgroundAnimationTimer.Interval = 250;
+            this.backgroundAnimationTimer.Interval = 500;
             this.backgroundAnimationTimer.Tick += new System.EventHandler(this.backgroundAnimationTimer_Tick);
             // 
             // playerHealth
@@ -71,6 +71,7 @@
             // playerIcon
             // 
             this.playerIcon.BackColor = System.Drawing.Color.White;
+            this.playerIcon.Image = global::Punch_Out.Properties.Resources.mac_icon;
             this.playerIcon.Location = new System.Drawing.Point(12, 12);
             this.playerIcon.Name = "playerIcon";
             this.playerIcon.Size = new System.Drawing.Size(76, 70);
@@ -81,6 +82,7 @@
             // enemyIcon
             // 
             this.enemyIcon.BackColor = System.Drawing.Color.White;
+            this.enemyIcon.Image = global::Punch_Out.Properties.Resources.enemy_icon;
             this.enemyIcon.Location = new System.Drawing.Point(1044, 12);
             this.enemyIcon.Name = "enemyIcon";
             this.enemyIcon.Size = new System.Drawing.Size(76, 70);

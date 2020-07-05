@@ -90,7 +90,6 @@ namespace Punch_Out
                 case 'd':
                     Player.Punch(false);
                 break;
-                //DEFAULT TO BE DELETED OR NOT?
                 default:
                     Player.Idle();
                 break;
