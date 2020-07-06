@@ -88,7 +88,7 @@
  * 0.4 веројатнст да блокира (BLOCK State)
  * 0.15 веројатност за удар
      Имплементирано со помош на `Random` со генерирање на број во рангот (1,101)
- 
+	
  	private void enemyStateTimer_Tick(object sender, EventArgs e)
         {
             int state = this.enemyStateGenerator.Next(1, 101);
@@ -110,7 +110,6 @@
                 Scene.changeEnemyState(Boxer.STATE.RIGHT);
                 this.PlayerHealthBar();
             }
-            
         }
 Рундата завршува кога еден од боксерите ќе имаат `Health` 0.
 Играчот се известува за крајот на рундата и со `MessageBox` избира дали сака да игра повторно или не.
