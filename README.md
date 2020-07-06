@@ -41,7 +41,7 @@
  Главно се повикуваат методите за движење на боксерите.
  
  # Форми
- Има 2 форми во проектот, `HomeForm` и 'Form1'
+ Има 2 форми во проектот, `HomeForm` и `Form1`
  
  ### HomeForm
  
@@ -50,5 +50,31 @@
   * `Play` - се инстанцира `Form1`
   * `Controls` - се прикажуваат контролите за движење/акции
   * `Quit` - се гаси играта
+ ### Form1
  
+ Главната форма на која што се овозможува да се игра играта.
+ Позадината е ринг со публика, со "псевдоанимаицја" која што со помош на `Timer` разменува помеѓу 4 слики кои што имаат разлики во публиката, со помош на променлива `backgroundNum`, што овозможува илузија на жива публика
+ 
+ 	private void backgroundAnimationTimer_Tick(object sender, EventArgs e)
+        {
+            switch(this.backgroundNum)
+            {
+                case 1:
+                    this.BackgroundImage = Resources.ringA;
+                    this.backgroundNum++;
+                    break;
+                case 2:
+                    this.BackgroundImage = Resources.ringB;
+                    this.backgroundNum++;
+                    break;
+                case 3:
+                    this.BackgroundImage = Resources.ringC;
+                    this.backgroundNum++;
+                    break;
+                case 4:
+                    this.BackgroundImage = Resources.ringD;
+                    this.backgroundNum = 1;
+                    break;               
+            }
+        }
  
