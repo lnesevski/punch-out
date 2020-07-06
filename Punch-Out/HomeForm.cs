@@ -17,6 +17,7 @@ namespace Punch_Out
         public HomeForm()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             this.Width = this.BackgroundImage.Width;
             this.Height = this.BackgroundImage.Height;
             this.pictureBox1.BackColor = Color.Transparent;
