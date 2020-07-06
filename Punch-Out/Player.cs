@@ -13,21 +13,21 @@ namespace Punch_Out
     
     public class Player : Boxer
     {
-        
+        private bool canPunch;
         public Player (Point p, Bitmap Image): base(p, Image)
         {
+
+            this.canPunch = true;
             this.Poisition.Offset(0, 140);
         }
 
       
-
         public override void Draw(Graphics g)
         {
              g.DrawImage(this.Image, this.Poisition);
         }
 
         
-
         public override void MoveDown()
         {
             if(this.Poisition.Y < 250)

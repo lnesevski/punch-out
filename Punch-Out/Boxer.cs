@@ -19,7 +19,6 @@ namespace Punch_Out
         protected Boxer enemy;
         protected STATE currentSTATE;
         protected int moveSpeed = 20;
-        protected bool canPunch;
         public enum STATE { IDLE, BLOCK, LEFT, RIGHT }
 
         public Boxer(Point p, Bitmap Image)
@@ -31,7 +30,6 @@ namespace Punch_Out
             this.Poisition = new Point(p.X - X, p.Y - Y);
             this.Health = 100;
             this.currentSTATE = Boxer.STATE.IDLE;
-            this.canPunch = true;
         }
 
         public void SetEnemy(Boxer enemy)

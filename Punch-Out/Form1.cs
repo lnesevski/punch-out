@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -140,7 +142,11 @@ namespace Punch_Out
                 }
                 else
                 {
-                    this.CurrentRound = 1;
+                    /*
+                    if (this.PlayerWins > this.EnemyWins && MessageBox.Show("Would you like to save your score?", String.Format("WIn/Lose: {0}-{1}", PlayerWins, EnemyWins), MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        //SAVE SCORETABLE
+                    }*/
                     this.Home.Show();
                     this.Close();
                 }
