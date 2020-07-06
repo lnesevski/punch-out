@@ -92,12 +92,6 @@ namespace Punch_Out
         }
 
 
-        //TODO REMOVE THIS IN FINAL VERSION
-        private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            Console.WriteLine(e.X + " " + e.Y);
-        }
-
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
                 this.Scene.movePlayer(e.KeyCode);
