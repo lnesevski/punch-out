@@ -105,7 +105,12 @@ namespace Punch_Out
         {
             this.Scene.changePlayerState(e.KeyChar);
             EnemyHealthBar();
-            if(this.Scene.IsRoundOver())
+            checkRoundOver();
+        }
+
+        private void checkRoundOver()
+        {
+            if (this.Scene.IsRoundOver())
             {
                 this.enemyMovementTimer.Stop();
                 this.enemyStateTimer.Stop();
@@ -134,7 +139,7 @@ namespace Punch_Out
                 }
                 else
                 {
-                   this.Home.Show();
+                    this.Home.Show();
                     this.Close();
                 }
             }
@@ -158,6 +163,7 @@ namespace Punch_Out
 
         private void enemyStateTimer_Tick(object sender, EventArgs e)
         {
+            
             int state = this.enemyStateGenerator.Next(1, 101);
             if (state <= 30)
             {
@@ -177,7 +183,7 @@ namespace Punch_Out
                 Scene.changeEnemyState(Boxer.STATE.RIGHT);
                 this.PlayerHealthBar();
             }
-            
+            checkRoundOver();
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
