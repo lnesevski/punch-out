@@ -162,7 +162,6 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDoubleClick);
             ((System.ComponentModel.ISupportInitialize)(this.playerIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemyIcon)).EndInit();
             this.ResumeLayout(false);

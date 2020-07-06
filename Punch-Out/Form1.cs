@@ -88,14 +88,12 @@ namespace Punch_Out
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             this.Scene.Draw(e.Graphics);
-            //Invalidate();
         }
-
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
                 this.Scene.movePlayer(e.KeyCode);
-            Invalidate();
+                Invalidate();
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -136,12 +134,7 @@ namespace Punch_Out
                 }
                 else
                 {
-                    /*
-                    if (this.PlayerWins > this.EnemyWins && MessageBox.Show("Would you like to save your score?", String.Format("WIn/Lose: {0}-{1}", PlayerWins, EnemyWins), MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    {
-                        //SAVE SCORETABLE
-                    }*/
-                    this.Home.Show();
+                   this.Home.Show();
                     this.Close();
                 }
             }
