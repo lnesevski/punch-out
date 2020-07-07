@@ -35,8 +35,8 @@
 
 Покрај Setters и Getters, постојат и други методи:
 
- * Методи за движење 'MoveUp()' 'MoveDown()' 'MoveLeft()' 'MoveRight()'
- * `InRnage()` - која користи позицијата од пријателот за да најде дали е доволно блозу за успешен удар (40 пикслеи апсолутна разлика по X и Y).
+ * Методи за движење `MoveUp()` `MoveDown()` `MoveLeft()` `MoveRight()`
+ * `InRnage()` - која користи позицијата од пријателот за да најде дали е доволно близу за успешен удар (40 пикслеи апсолутна разлика по X и Y).
  * `isDead()` дали Health e 0
  * `TakeDamage()` - повикана од противникот 
  ### `Scene`
@@ -93,28 +93,28 @@
  * 0.15 веројатност за удар
      Имплементирано со помош на `Random` со генерирање на број во рангот (1,101)
 	
- 	private void enemyStateTimer_Tick(object sender, EventArgs e)
-        {
-            int state = this.enemyStateGenerator.Next(1, 101);
-            if (state <= 30)
-            {
-                Scene.changeEnemyState(Boxer.STATE.IDLE);
-            }
-            else if (state <= 70)
-            {
-                Scene.changeEnemyState(Boxer.STATE.BLOCK);
-            }
-            else if (state <= 85)
-            {
-                Scene.changeEnemyState(Boxer.STATE.LEFT);
-                this.PlayerHealthBar();
-            }
-            else
-            {
-                Scene.changeEnemyState(Boxer.STATE.RIGHT);
-                this.PlayerHealthBar();
-            }
-        }
+		private void enemyStateTimer_Tick(object sender, EventArgs e)
+		{
+		    int state = this.enemyStateGenerator.Next(1, 101);
+		    if (state <= 30)
+		    {
+			Scene.changeEnemyState(Boxer.STATE.IDLE);
+		    }
+		    else if (state <= 70)
+		    {
+			Scene.changeEnemyState(Boxer.STATE.BLOCK);
+		    }
+		    else if (state <= 85)
+		    {
+			Scene.changeEnemyState(Boxer.STATE.LEFT);
+			this.PlayerHealthBar();
+		    }
+		    else
+		    {
+			Scene.changeEnemyState(Boxer.STATE.RIGHT);
+			this.PlayerHealthBar();
+		    }
+		}
 Рундата завршува кога еден од боксерите ќе имаат `Health` 0.
 Играчот се известува за крајот на рундата и со `MessageBox` избира дали сака да игра повторно или не.
 Доколку избере `Yes` со тоа што:
